@@ -3,7 +3,7 @@
 #include <assert.h>
 #include <stdlib.h>
 
-ll_Elem* ll_new(void *data)
+ll_Elem *ll_new(void *data)
 {
     ll_Elem *new = malloc(sizeof(ll_Elem));
     new->data = data;
@@ -12,7 +12,7 @@ ll_Elem* ll_new(void *data)
     return new;
 }
 
-ll_Elem* ll_append(ll_Elem *end, void *data)
+ll_Elem *ll_append(ll_Elem *end, void *data)
 {
     ll_Elem *new = ll_new(data);
     end->next = new;
@@ -20,13 +20,13 @@ ll_Elem* ll_append(ll_Elem *end, void *data)
     return new;
 }
 
-ll_Elem* ll_append_t(ll_Elem *some, void *data)
+ll_Elem *ll_append_t(ll_Elem *some, void *data)
 {
     while (some->next) some = some->next;
     return ll_append(some, data);
 }
 
-ll_Elem* ll_insert(ll_Elem *after, void *data)
+ll_Elem *ll_insert(ll_Elem *after, void *data)
 {
     ll_Elem *new = ll_new(data);
     new->next = after->next;
@@ -35,7 +35,7 @@ ll_Elem* ll_insert(ll_Elem *after, void *data)
     return new;
 }
 
-ll_Elem* ll_insert_index(ll_Elem *begin, size_t after, void *data)
+ll_Elem *ll_insert_index(ll_Elem *begin, size_t after, void *data)
 {
     ll_Elem *curr = begin;
     for (size_t i = 0; i < after; ++i) curr = curr->next;
@@ -43,7 +43,7 @@ ll_Elem* ll_insert_index(ll_Elem *begin, size_t after, void *data)
     return ll_insert(curr, data);
 }
 
-void* ll_set_index(ll_Elem *begin, size_t index, void *data)
+void *ll_set_index(ll_Elem *begin, size_t index, void *data)
 {
     ll_Elem *curr = begin;
     for (size_t i = 0; i <= index; ++i) curr = curr->next;
@@ -54,7 +54,7 @@ void* ll_set_index(ll_Elem *begin, size_t index, void *data)
     return old_data;
 }
 
-void* ll_pop_after(ll_Elem *after)
+void *ll_pop_after(ll_Elem *after)
 {
     void *old_data = after->next->data;
 
@@ -65,7 +65,7 @@ void* ll_pop_after(ll_Elem *after)
     return old_data;
 }
 
-void* ll_pop_index(ll_Elem *begin, size_t index)
+void *ll_pop_index(ll_Elem *begin, size_t index)
 {
     if (index == 0)
     {
@@ -80,7 +80,7 @@ void* ll_pop_index(ll_Elem *begin, size_t index)
     return ll_pop_after(curr);
 }
 
-void* ll_get_index(ll_Elem *begin, size_t index)
+void *ll_get_index(ll_Elem *begin, size_t index)
 {
     ll_Elem *curr = begin;
     for (size_t i = 0; i < index; ++i) curr = curr->next;
