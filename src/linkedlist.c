@@ -21,7 +21,7 @@ ll_Elem* ll_append(ll_Elem *end, void *data)
 
 ll_Elem* ll_append_t(ll_Elem *some, void *data)
 {
-    while (some->next != NULL) some = some->next;
+    while (some->next) some = some->next;
     return ll_append(some, data);
 }
 
