@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/constantine/projects/clinkedlist/build",
+  "command": "/usr/bin/cc  -I/home/constantine/projects/clinkedlist/src    -o CMakeFiles/clinkedlist.dir/src/linkedlist.c.o   -c /home/constantine/projects/clinkedlist/src/linkedlist.c",
+  "file": "/home/constantine/projects/clinkedlist/src/linkedlist.c"
+},
+{
+  "directory": "/home/constantine/projects/clinkedlist/build",
+  "command": "/usr/bin/cc  -I/home/constantine/projects/clinkedlist/src    -o CMakeFiles/clinkedlist.dir/src/main.c.o   -c /home/constantine/projects/clinkedlist/src/main.c",
+  "file": "/home/constantine/projects/clinkedlist/src/main.c"
+}
+]
