@@ -3,16 +3,16 @@ project(clinkedlist C)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-include_directories(
-    ${PROJECT_SOURCE_DIR}/src
-)
+file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/src/*.c")
 
-file(GLOB SOURCES
-    "${PROJECT_SOURCE_DIR}/src/*.c"
-)
+include_directories(${PROJECT_SOURCE_DIR}/src)
 
+# Create shared library
+add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
-add_executable(clinkedlist ${SOURCES})
+# Install library
+install(TARGETS ${PROJECT_NAME} DESTINATION lib/${PROJECT_NAME})
 
-
-
+# Install library headers
+file(GLOB HEADERS "${PROJECT_SOURCE_DIR}/src/*.h")
+install(FILES ${HEADERS} DESTINATION include/${PROJECT_NAME})
