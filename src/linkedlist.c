@@ -1,6 +1,7 @@
 #include "linkedlist.h"
-#include "assert.h"
-#include "stdlib.h"
+
+#include <assert.h>
+#include <stdlib.h>
 
 ll_Elem* ll_new(void *data)
 {
@@ -89,6 +90,6 @@ void* ll_get_index(ll_Elem *begin, size_t index)
 
 void ll_free_all(ll_Elem *begin)
 {
-    if (begin->next != NULL) ll_free_all(begin->next);
+    if (begin->next) ll_free_all(begin->next);
     free(begin);
 }
