@@ -1,3 +1,0 @@
-/home/constantine/projects/clinkedlist/build/CMakeFiles/rebuild_cache.dir
-/home/constantine/projects/clinkedlist/build/CMakeFiles/clinkedlist.dir
-/home/constantine/projects/clinkedlist/build/CMakeFiles/edit_cache.dir
