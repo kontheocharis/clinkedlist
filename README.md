@@ -1,3 +1,3 @@
 # clinkedlist
 
-An implementation of LinkedList in C. (Just for practice)
+An implementation of a linked list in C. (Just for practice)
